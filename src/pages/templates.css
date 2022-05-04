@@ -1,0 +1,17 @@
+.main-temp{
+  width: 600px;
+  margin: 0 auto;
+  background-color: silver;
+  padding: 0 20px 20px 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #262626;
+}
+
+.text-main {
+  color: #595959;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-decoration: none;
+}
