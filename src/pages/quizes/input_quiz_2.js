@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import {Button,
         Alert,
         Form} from "react-bootstrap";
-import Questions_1 from "./data_1.js";
+import Questions_2 from "./data_2.js";
 import "./quiz_1.css";
 
 
-const InputQuiz = () => {
+const InputQuizSecond = () => {
 
-  const Test1 = () => {
+  const Test2 = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
@@ -18,7 +18,7 @@ const InputQuiz = () => {
       }
 
       const nextQuetions = currentQuestion + 1;
-      if (nextQuetions < Questions_1.length) {
+      if (nextQuetions < Questions_2.length) {
         setCurrentQuestion(nextQuetions);
       } else {
         setShowScore(true);
@@ -29,7 +29,7 @@ const InputQuiz = () => {
           <div className="body1">
             {showScore ? (
               <div className="score-section">
-                Вы набрали {score} баллов из {Questions_1.length}
+                Вы набрали {score} баллов из {Questions_2.length}
               </div>
             ) : (
               <>
@@ -38,12 +38,12 @@ const InputQuiz = () => {
                     <span>Вопрос {currentQuestion + 1}</span>
                   </div>
                   <div className="question-text">
-                    {Questions_1[currentQuestion].questionText}
+                    {Questions_2[currentQuestion].questionText}
                   </div>
                 </div>
 
                 <div className="answer-section">
-                  {Questions_1[currentQuestion].answerOptions.map((answerOptions) => (
+                  {Questions_2[currentQuestion].answerOptions.map((answerOptions) => (
                     <button
                       className="buttontest"
                       onClick={() =>
@@ -79,7 +79,7 @@ const handleChange = () =>{
 return (
 <div>
      <h1 className="header1">Первый тест</h1>
-    <Alert variant="success" className="m-5">
+    <Alert variant="primary" className="m-5">
       <Alert.Heading>Открыть тест</Alert.Heading>
       <Form>
          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
@@ -92,7 +92,7 @@ return (
            </Form.Group>
       </Form>
       <div className="d-flex justify-content-center">
-      {show === true ? (<Test1/>) :(<></>)}
+      {show === true ? (<Test2/>) :(<></>)}
       </div>
       <hr />
       <div className="d-flex justify-content-end">
@@ -104,4 +104,4 @@ return (
 </div>
 )}
 
-export default InputQuiz;
+export default InputQuizSecond;

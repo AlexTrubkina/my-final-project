@@ -22,9 +22,20 @@ const Navigation = () => {
         <LinkContainer to="/">
         <Nav.Link>Общие сведения</Nav.Link>
         </LinkContainer>
-        <LinkContainer to="/theory">
-        <Nav.Link>Теория</Nav.Link>
-        </LinkContainer>
+        <NavDropdown title="Лекции" id="basic-nav-dropdown">
+          <LinkContainer to="/first_theory">
+          <NavDropdown.Item>Лекция № 1</NavDropdown.Item>
+          </LinkContainer>
+          <LinkContainer to="/second_theory">
+          <NavDropdown.Item>Лекция № 2</NavDropdown.Item>
+          </LinkContainer>
+          <LinkContainer to="/third_theory">
+          <NavDropdown.Item>Лекция № 3</NavDropdown.Item>
+          </LinkContainer>
+          <LinkContainer to="/forth_theory">
+          <NavDropdown.Item>Лекция № 4</NavDropdown.Item>
+          </LinkContainer>
+        </NavDropdown>
         <LinkContainer to="/resourses">
         <Nav.Link>Ресурсы</Nav.Link>
         </LinkContainer>
@@ -58,6 +69,15 @@ const Navigation = () => {
           <NavDropdown title="Тесты" id="basic-nav-dropdown">
             <LinkContainer to="/first_test">
             <NavDropdown.Item>Первый тест</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/second_test">
+            <NavDropdown.Item>Второй тест</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/third_test">
+            <NavDropdown.Item>Третий тест</NavDropdown.Item>
+            </LinkContainer>
+            <LinkContainer to="/forth_test">
+            <NavDropdown.Item>Четвертый тест</NavDropdown.Item>
             </LinkContainer>
         </NavDropdown>
         </Nav>

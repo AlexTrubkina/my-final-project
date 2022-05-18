@@ -6,9 +6,9 @@ import Questions_1 from "./data_1.js";
 import "./quiz_1.css";
 
 
-const InputQuiz = () => {
+const InputQuizThird = () => {
 
-  const Test1 = () => {
+  const Test3 = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
@@ -79,7 +79,7 @@ const handleChange = () =>{
 return (
 <div>
      <h1 className="header1">Первый тест</h1>
-    <Alert variant="success" className="m-5">
+    <Alert variant="info" className="m-5">
       <Alert.Heading>Открыть тест</Alert.Heading>
       <Form>
          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1" >
@@ -92,7 +92,7 @@ return (
            </Form.Group>
       </Form>
       <div className="d-flex justify-content-center">
-      {show === true ? (<Test1/>) :(<></>)}
+      {show === true ? (<Test3/>) :(<></>)}
       </div>
       <hr />
       <div className="d-flex justify-content-end">
@@ -104,4 +104,4 @@ return (
 </div>
 )}
 
-export default InputQuiz;
+export default InputQuizThird;
