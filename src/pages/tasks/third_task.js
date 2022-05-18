@@ -58,7 +58,7 @@ const Third = () =>
       <div className="header">
       <h2> Описание лабораторной работы</h2>
       </div>
-      
+
       <p>
       Создать текстовый документ с формулами. Набрать формулы представленные ниже. <br/>
       <br/>
@@ -84,7 +84,7 @@ const Third = () =>
       src={image.image}
       alt={image.alt}
     />
-    <Carousel.Caption style={{top: "50%", position: "absolute"}}>
+    <Carousel.Caption>
     <h1>{image.header}</h1>
     <br/>
     <p>

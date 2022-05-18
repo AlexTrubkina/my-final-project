@@ -181,7 +181,7 @@ const First = () =>
       src={image.image}
       alt={image.alt}
     />
-    <Carousel.Caption style={{top: "50%", position: "absolute"}}>
+    <Carousel.Caption>
     <h1>{image.header}</h1>
     <br/>
     <p>

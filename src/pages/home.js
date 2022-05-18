@@ -9,6 +9,14 @@ const Home = () =>
 
       <h1>Текстовые документы средствами LaTeX</h1>
 
+      <img
+       src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png"
+       width="150"
+       height="70"
+       className="d-inline-block align-top"
+       alt="Latex logo"
+     />
+
       </div>
 
           <Accordion defaultActiveKey="0">

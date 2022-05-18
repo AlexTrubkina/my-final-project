@@ -21,7 +21,7 @@ const questions = [
       questionText: "Что такое TeX?",
       answerOptions: [
         { answerText: "издательская система", isCorrect: true },
-        { answerText: "макропакетов", isCorrect: false },
+        { answerText: "макропакет", isCorrect: false },
         { answerText: "серия книг", isCorrect: false },
         { answerText: "онлайн-редактор", isCorrect: false }
       ]

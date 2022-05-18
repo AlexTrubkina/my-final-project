@@ -12,7 +12,9 @@ const Navigation = () => {
     <Navbar expand="lg" variant="dark" bg="dark">
        <Container>
        <LinkContainer to="/">
-       <Navbar.Brand>LaTeX</Navbar.Brand>
+       <Navbar.Brand>
+       LaTeX
+       </Navbar.Brand>
        </LinkContainer>
        <Navbar.Toggle aria-controls="basic-navbar-nav" />
        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

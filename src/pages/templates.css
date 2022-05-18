@@ -1,10 +1,14 @@
+.body-temp{
+  .display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-temp{
-  width: 600px;
-  margin: 0 auto;
+  
   background-color: silver;
   padding: 0 20px 20px 20px;
   margin-top: 50px;
-  margin-bottom: 50px;
   color: #262626;
 }
 
