@@ -1,25 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import './templates.css';
 import { Alert, Button } from 'react-bootstrap'
 
 
 const Templates = () =>{
 
-  const [copy, setCopy] = useState('');
+
   const text = `
-  \x2Fdocumentclass[a4paper,14pt]{article} % тип документа
-  \x2Fusepackage[T2A]{fontenc}	% кодировка
-  \x2Fusepackage[utf8]{inputenc}	% кодировка исходного текста
-  \x2Fusepackage[english,russian]{babel}	% локализация и переносы
-  \x2Fusepackage{hyperref}
-  \x2Fusepackage{wasysym}  %Заговолок
-  \x2Fauthor{ Ваше ФИО }
-  \x2Ftitle{Тема № 8}
-  \x2Fdate{\today}
-  \x2Fbegin{document}
-  \x2Fmaketitle
-  \x2Fnewpage
-  \x2Fend{document}
+  \x5Cdocumentclass[a4paper,14pt]{article} % тип документа
+  \x5Cusepackage[T2A]{fontenc}	% кодировка
+  \x5Cusepackage[utf8]{inputenc}	% кодировка исходного текста
+  \x5Cusepackage[english,russian]{babel}	% локализация и переносы
+  \x5Cusepackage{hyperref}
+  \x5Cusepackage{wasysym}  %Заговолок
+  \x5Cauthor{ Ваше ФИО }
+  \x5Ctitle{Тема № 8}
+  \x5Cdate{\x2Ftoday}
+  \x5Cbegin{document}
+  \x5Cmaketitle
+  \x5Cnewpage
+  \x5Cend{document}
   `;
 
 

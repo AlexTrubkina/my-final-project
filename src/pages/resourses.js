@@ -35,7 +35,6 @@ const Resourses = () =>
        <ListGroup>
        <ListGroup.Item action href ="https://www.youtube.com/watch?v=NOslSvJs29I">Открытая лекция CS центра </ListGroup.Item>
        <ListGroup.Item action href ="https://www.youtube.com/watch?v=hSc0H143ddw">LaTeX для начинающих</ListGroup.Item>
-       <p>Курс лекций</p>
        <ListGroup.Item action href ="https://www.youtube.com/watch?v=izYsKMl4KVE">Документы и презентации в LaTeX: О курсе #1</ListGroup.Item>
        <ListGroup.Item action href ="https://www.youtube.com/watch?v=3zgrlC6ZuD4">Документы и презентации в LaTeX: Что такое LaTeX #2</ListGroup.Item>
        <ListGroup.Item action href ="https://www.youtube.com/watch?v=-wCNhTXsrVg">Документы и презентации в LaTeX: Как работает LaTeX #3</ListGroup.Item>

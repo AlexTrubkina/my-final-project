@@ -175,7 +175,7 @@ const First = () =>
       <Carousel variant="dark">
       {images.map(image => {
         return (
-  <Carousel.Item>
+  <Carousel.Item key={image.alt}>
     <img
       className="d-block w-100"
       src={image.image}

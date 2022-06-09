@@ -5,23 +5,27 @@ import {Button,
 import Questions_1 from "./data_1.js";
 import "./quiz_1.css";
 
+import appendSpreadsheet from "./send_res.js"
+
 
 const InputQuiz = () => {
 
-  const Test1 = () => {
+  const Test1 = ({name}) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
+
     const handleAnswerButtonClick = (isCorrect) => {
       if (isCorrect === true) {
         setScore(score + 1);
       }
-
+     const newRow = { Name: (new Date()).toLocaleTimeString(), NameSurname: name, Result: score, Time: "Время окончания " + (new Date()).toLocaleTimeString(), Test: "Тест по первой теме" };
       const nextQuetions = currentQuestion + 1;
       if (nextQuetions < Questions_1.length) {
         setCurrentQuestion(nextQuetions);
       } else {
         setShowScore(true);
+        appendSpreadsheet(newRow);
       }
     };
   return (
@@ -46,6 +50,7 @@ const InputQuiz = () => {
                   {Questions_1[currentQuestion].answerOptions.map((answerOptions) => (
                     <button
                       className="buttontest"
+                      key={answerOptions.answerText}
                       onClick={() =>
                         handleAnswerButtonClick(answerOptions.isCorrect)
                       }
@@ -92,7 +97,7 @@ return (
            </Form.Group>
       </Form>
       <div className="d-flex justify-content-center">
-      {show === true ? (<Test1/>) :(<></>)}
+      {show === true ? (<Test1 name={text} />) :(<></>)}
       </div>
       <hr />
       <div className="d-flex justify-content-end">

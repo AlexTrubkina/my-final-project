@@ -4,7 +4,7 @@ import "./docs.css"
 
 const Docs = () =>
 
-     <div>
+     <div className="m-5">
      <div className='present'>
      <h1>Вспомогательная информация</h1>
      </div>
@@ -14,7 +14,7 @@ const Docs = () =>
     <Table striped bordered>
     <thead>
     <tr>
-    <th>№</th> <th>Команда</th> <th>Описание</th>
+    <th>№</th><th>Команда</th><th>Описание</th>
     </tr>
    </thead>
 <tbody>
@@ -64,7 +64,7 @@ const Docs = () =>
 <Table striped bordered>
 <thead>
  <tr>
- <th>№</th> <th>Команда</th> <th>Описание</th>
+ <th>№</th><th>Команда</th><th>Описание</th>
  </tr>
 </thead>
 <tbody>
@@ -109,7 +109,7 @@ const Docs = () =>
 <Table striped bordered>
 <thead>
  <tr>
- <th>№</th> <th>Команда</th> <th>Описание</th>
+ <th>№</th><th>Команда</th><th>Описание</th>
  </tr>
 </thead>
 <tbody>
@@ -153,39 +153,39 @@ const Docs = () =>
 <Table striped bordered>
 <thead>
  <tr>
- <th>№</th> <th>Команда</th> <th>Описание</th>
+ <th>№</th><th>Команда</th><th>Описание</th>
  </tr>
 </thead>
 <tbody>
  <tr>
-<td>1 </td><td>\begin&#123;quote&#125; \end&#123;quote&#125;</td><td> если нужно включить в текст цитату, пример, предупреждение и т. п., то удобно воспользоваться окружением quote;</td>
+<td>1</td><td>\begin&#123;quote&#125; \end&#123;quote&#125;</td><td> если нужно включить в текст цитату, пример, предупреждение и т. п., то удобно воспользоваться окружением quote;</td>
 </tr>
 <tr>
-<td>2 </td><td>\begin&#123;quotation&#125; \end&#123;quotation&#125;</td><td>аналогично quote, за тем исключением, что в тексте, оформленном этим окружением, делается абзацный отступ</td>
+<td>2</td><td>\begin&#123;quotation&#125; \end&#123;quotation&#125;</td><td>аналогично quote, за тем исключением, что в тексте, оформленном этим окружением, делается абзацный отступ</td>
 </tr>
 <tr>
-<td>3 </td><td>\begin&#123;flushleft&#125; \end&#123;flushleft&#125;</td><td>выравнивания по левому краю</td>
+<td>3</td><td>\begin&#123;flushleft&#125; \end&#123;flushleft&#125;</td><td>выравнивания по левому краю</td>
 </tr>
 <tr>
-<td>4 </td><td>\begin&#123;flushright&#125; \end&#123;flushright&#125;</td><td>выравнивания по правому краю</td>
+<td>4</td><td>\begin&#123;flushright&#125; \end&#123;flushright&#125;</td><td>выравнивания по правому краю</td>
 </tr>
 <tr>
-<td>5 </td><td>\begin&#123;center&#125; \end&#123;center&#125;</td><td>центрирование</td>
+<td>5</td><td>\begin&#123;center&#125; \end&#123;center&#125;</td><td>центрирование</td>
 </tr>
 <tr>
-<td>6 </td><td>\\</td><td>разбиение на строки</td>
+<td>6</td><td>\\</td><td>разбиение на строки</td>
 </tr>
 <tr>
-<td>7 </td><td>\begin&#123;itemize&#125; \end&#123;itemize&#125;</td><td>простейшие перечни</td>
+<td>7</td><td>\begin&#123;itemize&#125; \end&#123;itemize&#125;</td><td>простейшие перечни</td>
 </tr>
 <tr>
-<td>8 </td><td>\begin&#123;enumerate&#125; \end&#123;enumerate&#125;</td><td>нумерованные перечни</td>
+<td>8</td><td>\begin&#123;enumerate&#125; \end&#123;enumerate&#125;</td><td>нумерованные перечни</td>
 </tr>
 <tr>
-<td>9 </td><td>\begin&#123;description&#125; \end&#123;description&#125;</td><td> перечни с заголовками</td>
+<td>9</td><td>\begin&#123;description&#125; \end&#123;description&#125;</td><td> перечни с заголовками</td>
 </tr>
 <tr>
-<td>10 </td><td>\item</td><td>элементы перечня вводятся этой командой внутри окружения</td>
+<td>10</td><td>\item</td><td>элементы перечня вводятся этой командой внутри окружения</td>
 </tr>
 </tbody>
 </Table>
@@ -197,27 +197,27 @@ const Docs = () =>
 <Table striped bordered>
 <thead>
  <tr>
- <th>№</th> <th>Команда</th> <th>Описание</th>
+ <th>№</th><th>Команда</th><th>Описание</th>
  </tr>
 </thead>
 <tbody>
  <tr>
-<td>1 </td><td>\sum_&#123;i=1&#125;^n n^2</td><td>генерирует сумму, где пределы суммирования i=1, n  </td>
+<td>1</td><td>\sum_&#123;i=1&#125;^n n^2</td><td>генерирует сумму, где пределы суммирования i=1, n  </td>
 </tr>
 <tr>
-<td>2 </td><td>\frac&#123;делимое&#125;&#123;делитель&#125;</td><td>создает дробь</td>
+<td>2</td><td>\frac&#123;делимое&#125;&#123;делитель&#125;</td><td>создает дробь</td>
 </tr>
 <tr>
-<td>3 </td><td>\lim_&#123;n\to\infinity&#125;</td><td>предел где n стремиться к бесконечности</td>
+<td>3</td><td>\lim_&#123;n\to\infinity&#125;</td><td>предел где n стремиться к бесконечности</td>
 </tr>
 <tr>
-<td>4 </td><td>\max</td><td>максимум</td>
+<td>4</td><td>\max</td><td>максимум</td>
 </tr>
 <tr>
-<td>5 </td><td>\min</td><td>минимум</td>
+<td>5</td><td>\min</td><td>минимум</td>
 </tr>
 <tr>
-<td>6 </td><td>\int_0^1x^2 dx=1/3</td><td>интеграл у которого пределы 0 и 1, подинтегральная функция x^2</td>
+<td>6</td><td>\int_0^1x^2 dx=1/3</td><td>интеграл у которого пределы 0 и 1, подинтегральная функция x^2</td>
 </tr>
 </tbody>
 </Table>

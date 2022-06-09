@@ -24,7 +24,7 @@ import InputQuiz from "./pages/quizes/input_quiz"
 import InputQuizSecond from "./pages/quizes/input_quiz_2"
 import InputQuizThird from "./pages/quizes/input_quiz_3"
 import InputQuizForth from "./pages/quizes/input_quiz_4"
-import Navigation from "./layout/Nav"
+import Navigation from "./layout/Navigation"
 import Fifth from "./pages/tasks/fifth_task"
 
 

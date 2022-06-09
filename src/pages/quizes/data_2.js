@@ -12,7 +12,7 @@ const Questions_2 = [
       questionText: "Выберите команду, которая делает текст самого большого размера.",
       answerOptions: [
         { answerText: "smal", isCorrect: false },
-        { answerText: "Huge", isCorrect: false },
+        { answerText: "huge", isCorrect: false },
         { answerText: "big", isCorrect: false },
         { answerText: "Huge", isCorrect: true }
       ]

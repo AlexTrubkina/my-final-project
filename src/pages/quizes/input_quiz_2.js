@@ -5,10 +5,12 @@ import {Button,
 import Questions_2 from "./data_2.js";
 import "./quiz_1.css";
 
+import appendSpreadsheet from "./send_res.js"
+
 
 const InputQuizSecond = () => {
 
-  const Test2 = () => {
+  const Test2 = ({name}) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
@@ -17,13 +19,17 @@ const InputQuizSecond = () => {
         setScore(score + 1);
       }
 
-      const nextQuetions = currentQuestion + 1;
+    const nextQuetions = currentQuestion + 1;
+
+
       if (nextQuetions < Questions_2.length) {
         setCurrentQuestion(nextQuetions);
       } else {
         setShowScore(true);
+        appendSpreadsheet(newRow);
       }
     };
+    const newRow = { Name: (new Date()).toLocaleTimeString(), NameSurname: name, Result: score + 1, Time: "Время окончания" + (new Date()).toLocaleTimeString(), Test: "Тест по второй теме"};
   return (
     <>
           <div className="body1">
@@ -46,6 +52,7 @@ const InputQuizSecond = () => {
                   {Questions_2[currentQuestion].answerOptions.map((answerOptions) => (
                     <button
                       className="buttontest"
+                      key={answerOptions.answerText}
                       onClick={() =>
                         handleAnswerButtonClick(answerOptions.isCorrect)
                       }
@@ -78,7 +85,7 @@ const handleChange = () =>{
 
 return (
 <div>
-     <h1 className="header1">Первый тест</h1>
+     <h1 className="header1">Второй тест</h1>
     <Alert variant="primary" className="m-5">
       <Alert.Heading>Открыть тест</Alert.Heading>
       <Form>
@@ -92,7 +99,7 @@ return (
            </Form.Group>
       </Form>
       <div className="d-flex justify-content-center">
-      {show === true ? (<Test2/>) :(<></>)}
+      {show === true ? (<Test2 name={text}/>) :(<></>)}
       </div>
       <hr />
       <div className="d-flex justify-content-end">
