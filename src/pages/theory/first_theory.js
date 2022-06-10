@@ -71,9 +71,9 @@ return(
       но лучше использовать редакторы, предназначенные специально для работы с LaTeX:</p>
       <div className="d-flex justify-content-center m-5">
       <ListGroup horizontal="sm">
-      <ListGroup.Item variant="info" href = 'https://www.xm1math.net/texmaker/download.html'>TeXMaker</ListGroup.Item>
-      <ListGroup.Item variant="info" href = 'https://kile.sourceforge.io/'>Kile</ListGroup.Item>
-      <ListGroup.Item variant="info" href = 'http://texstudio.sourceforge.net/'>TeXStudio</ListGroup.Item>
+      <ListGroup.Item action variant="info" href = 'https://www.xm1math.net/texmaker/download.html'>TeXMaker</ListGroup.Item>
+      <ListGroup.Item action variant="info" href = 'https://kile.sourceforge.io/'>Kile</ListGroup.Item>
+      <ListGroup.Item action variant="info" href = 'http://texstudio.sourceforge.net/'>TeXStudio</ListGroup.Item>
       </ListGroup>
       </div>
       <p>Создавать исходные файлы можно и в онлайн редакторах, таких как Overleaf.</p>
@@ -144,11 +144,13 @@ return(
       <h2>Структура исходного файла</h2>
       </div>
       <p>Структуру исходного файла можно рассмотреть на примере шаблона представленного ниже:</p>
+      <div className="d-flex justify-content-center">
       <Alert variant="warning">
       <pre>
       {text}
       </pre>
       </Alert>
+      </div>
     <p>Каждый документа начинается с того, что задается тип документа и его параметры.
     Типы документов:
     </p>
@@ -184,11 +186,13 @@ return(
     Рассмотрим структуру исходного файла типа документа article и дальше будем работать именно с ним.
     После того как мы задали тип документа следует команда \usepackage, она подключает все необходимые пакеты.
     </p>
+    <div className="d-flex justify-content-center ">
     <Alert variant="primary">
     <pre>
     {text1}
     </pre>
     </Alert>
+    </div>
     <ul>
     <li>Команда \usepackage[T2A]&#123;fontenc&#125; используется для кодировки шрифтов. Стандартными кодировками шрифтов с кириллическими буквами являются 8-битные кодировки T2A, T2B, T2C и X2. для документов на русском языке обычно используются кодировка T2A, эта кодировка также включает в себя буквы латинского алфавита и поэтому подходит для смешанных текстов. По стандарту кодировка текстовых шрифов указывается посредством пакета fontenc.</li>
 
@@ -204,11 +208,13 @@ return(
     После того как все необходимые пакеты были добавлены указывается автор, название и дата создания документа. Это делается с помощью команд \author&#123;Ваше имя&#125;, date&#123;\today&#125;, \title&#123;Название документа&#125;.
     После чего, можно приступать к созданию разметки самого документа и его форматированию.
     </p>
+    <div className="d-flex justify-content-center">
     <Alert variant="success">
     <pre>
     {text2}
     </pre>
     </Alert>
+    </div>
     <p>
     Для того чтобы начать работу над текстом документа создано окружение \begin&#123;document&#125; … \end&#123;document&#125;. Внутри этого окружения была создана титульная страница с помощью команды \maketitle и, чтобы первая глава не начиналась сразу же после текста на титульном листе, текст был перенесен на следующую страницу с помощью команды \newpage. С помощью команды \tableofcontents было создано содержание.  Документ был поделен на главы и подглавы с помощью команд \section и \subsection. Как вы могли заметить одна команда \section* задана со звездочкой, это делается для того, чтобы данный раздел документа не нумеровался.
 

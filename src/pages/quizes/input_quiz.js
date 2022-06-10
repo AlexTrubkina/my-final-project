@@ -7,6 +7,7 @@ import "./quiz_1.css";
 
 import appendSpreadsheet from "./send_res.js"
 
+const moment = require('moment');
 
 const InputQuiz = () => {
 
@@ -19,7 +20,7 @@ const InputQuiz = () => {
       if (isCorrect === true) {
         setScore(score + 1);
       }
-     const newRow = { Name: (new Date()).toLocaleTimeString(), NameSurname: name, Result: score, Time: "Время окончания " + (new Date()).toLocaleTimeString(), Test: "Тест по первой теме" };
+     const newRow = { Name: moment().format("YYYY-MM-DD[T]HH:mm:ss"), NameSurname: name, Result: score, Time: "Время окончания " + (new Date()).toLocaleTimeString(), Test: "Тест по первой теме" };
       const nextQuetions = currentQuestion + 1;
       if (nextQuetions < Questions_1.length) {
         setCurrentQuestion(nextQuetions);

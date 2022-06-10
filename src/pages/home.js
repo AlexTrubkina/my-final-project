@@ -66,13 +66,11 @@ const Home = () =>
           <Accordion.Item eventKey="4">
           <Accordion.Header>Форумы</Accordion.Header>
              <Accordion.Body>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-              est laborum.
+             <ol>
+             <li><a href = 'https://www.linux.org.ru/tag/latex?section=2'>Ссылка на форум</a> -  форум на сайте LINUX.ORG.RU с обсуждением различных тем, связанных с LaTeXом.</li>
+             <li><a href = 'https://latex.org/forum/'>Ссылка на форму</a> - англоязычный форум сообщества пользователей издательской системы LaTeX.</li>
+             <li><a href = 'https://dxdy.ru/texnicheskie-obsuzhdeniya-f33.html'>Ссылка на форум</a> - форум содержит различные темы и обсуждения издательской системы LaTeX, а также шаблоны.</li>
+             </ol>
              </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="5">
@@ -82,7 +80,7 @@ const Home = () =>
               <li><a href = 'https://ru.overleaf.com/'>Overleaf</a> -  онлайн-редактор LaTeX. Позволяет нескольким пользователям редактировать один и тот же документ одновременно и просматривать изменения друг друга в режиме реального времени. Программа поддерживает практически все функции LaTeX.</li>
               <li><a href = 'https://www.xm1math.net/texmaker/download.html'>Texmaker</a> - кроссплатформенный открытый LaTeX-редактор с интерфейсом, подобным Kile. Тогда как Kile является родным приложением под KDE-платформу, Texmaker является также совместимым с Gnome.</li>
               <li><a href = 'https://kile.sourceforge.io/'>Kile</a> - текстовый редактор для LaTeX. Kile основан на стандартном для KDE редакторе Kate и работает в UNIX‐подобных операционных системах, в частности под Linux и Mac OS X. Поддерживаются автодополнения кода и текста.</li>
-              <li><a href = 'http://texstudio.sourceforge.net/'>TeXstudio</a> - текстовый редактор для LaTeX. Kile основан на стандартном для KDE редакторе Kate и работает в UNIX‐подобных операционных системах, в частности под Linux и Mac OS X. Поддерживаются автодополнения кода и текста.</li>
+              <li><a href = 'http://texstudio.sourceforge.net/'>TeXstudio</a> - кросс-платформенный редактор LAΤΕΧ с открытым кодом, подобный Texmaker.</li>
               </ol>
              </Accordion.Body>
           </Accordion.Item>
