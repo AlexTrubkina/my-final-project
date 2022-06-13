@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {Button,
         Alert,
         Form} from "react-bootstrap";
-import Questions_1 from "./data_1.js";
+import questions_1 from "./data_1.js";
 import "./quiz_1.css";
 
 import appendSpreadsheet from "./send_res.js"
@@ -20,12 +20,14 @@ const InputQuiz = () => {
       if (isCorrect === true) {
         setScore(score + 1);
       }
-     const newRow = { Name: moment().format("YYYY-MM-DD[T]HH:mm:ss"), NameSurname: name, Result: score, Time: "Время окончания " + (new Date()).toLocaleTimeString(), Test: "Тест по первой теме" };
+
       const nextQuetions = currentQuestion + 1;
-      if (nextQuetions < Questions_1.length) {
+      if (nextQuetions < questions_1.length) {
         setCurrentQuestion(nextQuetions);
       } else {
         setShowScore(true);
+        const result1 = score;
+        const newRow = { Name: moment().format("YYYY-MM-DD[T]HH:mm:ss"), NameSurname: name, Result: result1, Time: "Время окончания " + (new Date()).toLocaleTimeString(), Test: "Тест по первой теме" };
         appendSpreadsheet(newRow);
       }
     };
@@ -34,7 +36,7 @@ const InputQuiz = () => {
           <div className="body1">
             {showScore ? (
               <div className="score-section">
-                Вы набрали {score} баллов из {Questions_1.length}
+                Вы набрали {score} баллов из {questions_1.length}
               </div>
             ) : (
               <>
@@ -43,12 +45,12 @@ const InputQuiz = () => {
                     <span>Вопрос {currentQuestion + 1}</span>
                   </div>
                   <div className="question-text">
-                    {Questions_1[currentQuestion].questionText}
+                    {questions_1[currentQuestion].questionText}
                   </div>
                 </div>
 
                 <div className="answer-section">
-                  {Questions_1[currentQuestion].answerOptions.map((answerOptions) => (
+                  {questions_1[currentQuestion].answerOptions.map((answerOptions) => (
                     <button
                       className="buttontest"
                       key={answerOptions.answerText}

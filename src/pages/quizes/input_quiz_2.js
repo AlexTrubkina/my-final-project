@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {Button,
         Alert,
         Form} from "react-bootstrap";
-import Questions_2 from "./data_2.js";
+import questions_2 from "./data_2.js";
 import "./quiz_1.css";
 
 import appendSpreadsheet from "./send_res.js"
@@ -23,20 +23,21 @@ const InputQuizSecond = () => {
     const nextQuetions = currentQuestion + 1;
 
 
-      if (nextQuetions < Questions_2.length) {
+      if (nextQuetions < questions_2.length) {
         setCurrentQuestion(nextQuetions);
       } else {
         setShowScore(true);
+        const result2 = score;
+        const newRow = { Name: moment().format("YYYY-MM-DD[T]HH:mm:ss"), NameSurname: name, Result: result2, Time: "Время окончания " + (new Date()).toLocaleTimeString(), Test: "Тест по первой теме" };
         appendSpreadsheet(newRow);
       }
     };
-    const newRow = { Name: moment().format("YYYY-MM-DD[T]HH:mm:ss"), NameSurname: name, Result: score, Time: "Время окончания" + (new Date()).toLocaleTimeString(), Test: "Тест по второй теме"};
   return (
     <>
           <div className="body1">
             {showScore ? (
               <div className="score-section">
-                Вы набрали {score} баллов из {Questions_2.length}
+                Вы набрали {score} баллов из {questions_2.length}
               </div>
             ) : (
               <>
@@ -45,12 +46,12 @@ const InputQuizSecond = () => {
                     <span>Вопрос {currentQuestion + 1}</span>
                   </div>
                   <div className="question-text">
-                    {Questions_2[currentQuestion].questionText}
+                    {questions_2[currentQuestion].questionText}
                   </div>
                 </div>
 
                 <div className="answer-section">
-                  {Questions_2[currentQuestion].answerOptions.map((answerOptions) => (
+                  {questions_2[currentQuestion].answerOptions.map((answerOptions) => (
                     <button
                       className="buttontest"
                       key={answerOptions.answerText}

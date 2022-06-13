@@ -1,4 +1,4 @@
-const Questions_2 = [
+const questions_2 = [
     {
       questionText: "С помощью какой команды можно подчеркнуть слово?",
       answerOptions: [
@@ -90,4 +90,4 @@ const Questions_2 = [
       ]
     },
   ];
-export default Questions_2;
+export default questions_2;

@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import {Button,
         Alert,
         Form} from "react-bootstrap";
-import Questions_1 from "./data_1.js";
+import questions_3 from "./data_3.js";
 import "./quiz_1.css";
 
+import appendSpreadsheet from "./send_res.js"
+
+const moment = require('moment');
 
 const InputQuizThird = () => {
 
-  const Test3 = () => {
+  const Test3 = ({name}) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
@@ -18,10 +21,13 @@ const InputQuizThird = () => {
       }
 
       const nextQuetions = currentQuestion + 1;
-      if (nextQuetions < Questions_1.length) {
+      if (nextQuetions < questions_3.length) {
         setCurrentQuestion(nextQuetions);
       } else {
         setShowScore(true);
+        const result3 = score;
+        const newRow = { Name: moment().format("YYYY-MM-DD[T]HH:mm:ss"), NameSurname: name, Result: result3, Time: "Время окончания " + (new Date()).toLocaleTimeString(), Test: "Тест по третьей теме" };
+        appendSpreadsheet(newRow);
       }
     };
   return (
@@ -29,7 +35,7 @@ const InputQuizThird = () => {
           <div className="body1">
             {showScore ? (
               <div className="score-section">
-                Вы набрали {score} баллов из {Questions_1.length}
+                Вы набрали {score} баллов из {questions_3.length}
               </div>
             ) : (
               <>
@@ -38,12 +44,12 @@ const InputQuizThird = () => {
                     <span>Вопрос {currentQuestion + 1}</span>
                   </div>
                   <div className="question-text">
-                    {Questions_1[currentQuestion].questionText}
+                    {questions_3[currentQuestion].questionText}
                   </div>
                 </div>
 
                 <div className="answer-section">
-                  {Questions_1[currentQuestion].answerOptions.map((answerOptions) => (
+                  {questions_3[currentQuestion].answerOptions.map((answerOptions) => (
                     <button
                       className="buttontest"
                       onClick={() =>
@@ -92,7 +98,7 @@ return (
            </Form.Group>
       </Form>
       <div className="d-flex justify-content-center">
-      {show === true ? (<Test3/>) :(<></>)}
+      {show === true ? (<Test3 name={text}/>) :(<></>)}
       </div>
       <hr />
       <div className="d-flex justify-content-end">

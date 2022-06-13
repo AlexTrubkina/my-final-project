@@ -1,4 +1,4 @@
-const Questions_1 = [
+const questions_1 = [
     {
       questionText: "Кто разработал TeX?",
       answerOptions: [
@@ -91,4 +91,4 @@ const Questions_1 = [
     },
   ];
 
-export default Questions_1;
+export default questions_1;
